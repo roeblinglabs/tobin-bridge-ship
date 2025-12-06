@@ -630,11 +630,10 @@ st.markdown("""
 - Does not currently account for: tidal currents, wind effects, or vessel-specific maneuverability characteristics
 - Future enhancements: Integration with NOAA tidal current data, vessel maneuverability models based on size/type, and real-time weather corrections
 
-**About Roebling Labs:** We protect bridge users from vessel collision using real-time transponder (AIS) tracking and computer vision.
-
-We combine vessel trajectory forecasting with AASHTO bridge impact analysis to continuously assign a threat level to each vessel within 30 nautical miles of the site.
-
-Learn more at [roeblinglabs.com](https://roeblinglabs.com)
+**About Roebling Labs:**
+- We protect bridge users from vessel collision using real-time transponder (AIS) tracking and computer vision.
+- We combine vessel trajectory forecasting with AASHTO bridge impact analysis to continuously assign a threat level to each vessel within 30 nautical miles of the site.
+- Learn more at [roeblinglabs.com](https://roeblinglabs.com)
 """)
 
 st.markdown("---")
