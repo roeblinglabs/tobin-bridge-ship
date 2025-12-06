@@ -18,7 +18,7 @@ with logo_col:
     st.image("Logo-Roebling-Labs.webp", width=150)
 
 with title_col:
-    st.title("🌉 Tobin Bridge Vessel Collision Monitoring System")
+    st.title("🌉 Tobin Bridge Vessel Collision Warning System")
     st.markdown("**Roebling Labs LLC** | Vessel tracking, trajectory forecasting, and AASHTO bridge impact analysis")
 
 st.markdown("---")
@@ -323,7 +323,7 @@ with col1:
         st.info(f"""
         **📊 Ship Data:** Last updated {update_time.strftime('%I:%M %p')} Local Time ({update_time.strftime('%Z')}) on {update_time.strftime('%b %d, %Y')}
 
-        **Note:** This demo uses recent vessel data updated manually for demonstration purposes.
+        **Note:** This demo uses vessel data pulled daily from AISStream.io for demonstration purposes.
         Production systems deploy a local AIS receiver at the bridge site for real-time vessel tracking,
         with computer vision backup for redundancy and visual verification.
         """)
