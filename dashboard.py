@@ -616,6 +616,42 @@ with col2:
         and emergency response protocols.*
         """)
 
+    # Threat Category Definitions Section
+    st.subheader("🚦 Threat Category Definitions")
+    with st.expander("View Details", expanded=False):
+        col_a, col_b = st.columns(2)
+
+        with col_a:
+            st.markdown("""
+            **🔴 ALARM - Close Bridge Immediately**
+            - Vessel demand/capacity ratio ≥ 1.0
+            - Excessive speed (>15 knots) approaching bridge
+            - Distance < 2 nautical miles
+            - **Action Required:** Activate bridge closure protocol
+            - **Note:** Off-course detection requires site-specific navigation channel mapping (future enhancement)
+
+            **🟠 ELEVATED MONITORING - Heightened Awareness**
+            - Large vessel (D/C ≥ 0.75) within 5 nm
+            - Approaching bridge
+            - **Normal for vessels transiting under bridge**
+            - Routine monitoring protocols apply
+            """)
+
+        with col_b:
+            st.markdown("""
+            **🟡 MONITOR - Routine Tracking**
+            - Large vessel (D/C ≥ 0.5) within 10 nm
+            - Not in immediate approach
+            - Standard monitoring procedures
+
+            **🟢 NEGLIGIBLE THREAT - Safe Passage**
+            - Small vessels (D/C < 0.5)
+            - Vessels heading away from bridge
+            - Vessels that will ground before pier
+            - Stationary vessels or far from bridge (>10 nm)
+            - No action required
+            """)
+
 # Footer
 st.markdown("---")
 
@@ -635,39 +671,3 @@ st.markdown("""
 - We combine vessel trajectory forecasting with AASHTO bridge impact analysis to continuously assign a threat level to each vessel within 30 nautical miles of the site.
 - Learn more at [roeblinglabs.com](https://roeblinglabs.com)
 """)
-
-st.markdown("---")
-st.markdown("### 🚦 Threat Category Definitions")
-
-col_a, col_b = st.columns(2)
-
-with col_a:
-    st.markdown("""
-    **🔴 ALARM - Close Bridge Immediately**
-    - Vessel demand/capacity ratio ≥ 1.0
-    - Excessive speed (>15 knots) approaching bridge
-    - Distance < 2 nautical miles
-    - **Action Required:** Activate bridge closure protocol
-    - **Note:** Off-course detection requires site-specific navigation channel mapping (future enhancement)
-
-    **🟠 ELEVATED MONITORING - Heightened Awareness**
-    - Large vessel (D/C ≥ 0.75) within 5 nm
-    - Approaching bridge
-    - **Normal for vessels transiting under bridge**
-    - Routine monitoring protocols apply
-    """)
-
-with col_b:
-    st.markdown("""
-    **🟡 MONITOR - Routine Tracking**
-    - Large vessel (D/C ≥ 0.5) within 10 nm
-    - Not in immediate approach
-    - Standard monitoring procedures
-
-    **🟢 NEGLIGIBLE THREAT - Safe Passage**
-    - Small vessels (D/C < 0.5)
-    - Vessels heading away from bridge
-    - Vessels that will ground before pier
-    - Stationary vessels or far from bridge (>10 nm)
-    - No action required
-    """)
